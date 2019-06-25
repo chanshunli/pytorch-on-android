@@ -3,6 +3,7 @@ pacman -S base-devel
 pacman -S git
 pacman -S python-pip
 pacman -S cmake
+pacman -S tmux
 
 # https://docs.anaconda.com/anaconda/install/linux
 pacman -Sy libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl  alsa-lib libglvnd
