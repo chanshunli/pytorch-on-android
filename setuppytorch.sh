@@ -2,6 +2,11 @@
 pacman -S base-devel
 pacman -S git
 pacman -S python-pip
+
+# https://docs.anaconda.com/anaconda/install/linux
+pacman -Sy libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl  alsa-lib libglvnd
+
+
 git clone http://github.com/pytorch/pytorch
 cd pytorch
 git submodule update --init --recursive
