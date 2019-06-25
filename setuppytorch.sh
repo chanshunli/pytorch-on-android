@@ -23,3 +23,8 @@ cd ..
 
 ## 最后再root环境+zsh环境下执行成功了:
 python setup.py  install
+
+## root + zsh + 目录/data/data/com.termux/files/home
+pacman -S  python-imaging # ok
+pip install Pillow # ok 
+pip install torchvision # ok
