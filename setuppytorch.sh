@@ -46,9 +46,10 @@ git clone https://github.com/numpy/numpy && cd numpy
 python setup.py install # 编译安装numpy
 #
 pacman -S gcc-fortran
+pip install pybind11
+pacman -S lapack
 git clone https://github.com/scipy/scipy && cd scipy
 python setup.py install # 编译安装scipy
-
 
 #### install keras:
 pacman -S openblas
