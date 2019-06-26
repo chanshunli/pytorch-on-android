@@ -28,12 +28,6 @@ pacman -S  python-imaging # ok
 pip install Pillow # ok 
 pip install torchvision # ok
 
-#### install keras:
-pacman -S openblas
-pip install scikit-learn scipy matplotlib
-pip install tensorflow
-pip install keras
-
 # https://www.codelast.com/%E5%8E%9F%E5%88%9B-%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE3%E4%B8%8A%E8%B7%91ell%E7%9A%84demo%E6%8A%A5%E9%94%99%EF%BC%9Aimporterror-build_darknetreference-so-undefined-symbol-cblas_sgemm/
 ### `from numpy import multiarray` => `ImportError: /usr/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-aarch64-linux-gnu.so: undefined symbol: cblas_sgemm`
 pacman -Ss blas # 查找 blas相关的全部卸载
@@ -45,3 +39,18 @@ cd OpenBLAS
 make
 make PREFIX=/usr/lib/openblas install
 nm -D /usr/lib/openblas/lib/libopenblas.so  | grep cblas_sgemm #=> 正确 0000000000031c10 T cblas_sgemm
+echo "" >> ~/.zshrc
+
+pip uninstall numpy scipy
+git clone numpy 
+python setup.py install # 编译安装numpy
+
+git clone scipy
+python setup.py install # 编译安装scipy
+
+
+#### install keras:
+pacman -S openblas
+pip install scikit-learn  matplotlib
+pip install tensorflow
+pip install keras
