@@ -40,12 +40,13 @@ make
 make PREFIX=/usr/lib/openblas install
 nm -D /usr/lib/openblas/lib/libopenblas.so  | grep cblas_sgemm #=> 正确 0000000000031c10 T cblas_sgemm
 echo "" >> ~/.zshrc
-
+#
 pip uninstall numpy scipy
-git clone numpy 
+git clone https://github.com/numpy/numpy && cd numpy
 python setup.py install # 编译安装numpy
-
-git clone scipy
+#
+pacman -S gcc-fortran
+git clone https://github.com/scipy/scipy && cd scipy
 python setup.py install # 编译安装scipy
 
 
