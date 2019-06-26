@@ -44,3 +44,4 @@ git clone https://github.com/xianyi/OpenBLAS
 cd OpenBLAS
 make
 make PREFIX=/usr/lib/openblas install
+nm -D /usr/lib/openblas/lib/libopenblas.so  | grep cblas_sgemm #=> 正确 0000000000031c10 T cblas_sgemm
