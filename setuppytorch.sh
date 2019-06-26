@@ -9,8 +9,7 @@ pacman -S zsh
 # https://docs.anaconda.com/anaconda/install/linux
 pacman -Sy libxau libxi libxss libxtst libxcursor libxcomposite libxdamage libxfixes libxrandr libxrender mesa-libgl  alsa-lib libglvnd
 
-pip install numpy matplotlib pandas jupyter
-pip install scikit-learn scipy
+pip install numpy  pandas jupyter
 
 git clone http://github.com/pytorch/pytorch
 cd pytorch
@@ -28,3 +27,9 @@ python setup.py  install
 pacman -S  python-imaging # ok
 pip install Pillow # ok 
 pip install torchvision # ok
+
+#### install keras:
+pacman -S openblas
+pip install scikit-learn scipy matplotlib
+pip install tensorflow
+pip install keras
