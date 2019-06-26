@@ -52,7 +52,6 @@ git clone https://github.com/scipy/scipy && cd scipy
 python setup.py install # 编译安装scipy
 
 #### install keras:
-pacman -S openblas
 pip install scikit-learn  matplotlib
 pip install tensorflow
 pip install keras
