@@ -33,3 +33,13 @@ pacman -S openblas
 pip install scikit-learn scipy matplotlib
 pip install tensorflow
 pip install keras
+
+### `from numpy import multiarray` => `ImportError: /usr/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-aarch64-linux-gnu.so: undefined symbol: cblas_sgemm`
+pacman -Ss blas # 查找 blas相关的全部卸载
+pacman -R blas
+pacman -R openblas
+pacman -R blas
+git clone https://github.com/xianyi/OpenBLAS
+cd OpenBLAS
+make
+make PREFIX=/usr/lib/openblas install
