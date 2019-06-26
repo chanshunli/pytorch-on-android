@@ -34,6 +34,7 @@ pip install scikit-learn scipy matplotlib
 pip install tensorflow
 pip install keras
 
+# https://www.codelast.com/%E5%8E%9F%E5%88%9B-%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE3%E4%B8%8A%E8%B7%91ell%E7%9A%84demo%E6%8A%A5%E9%94%99%EF%BC%9Aimporterror-build_darknetreference-so-undefined-symbol-cblas_sgemm/
 ### `from numpy import multiarray` => `ImportError: /usr/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-aarch64-linux-gnu.so: undefined symbol: cblas_sgemm`
 pacman -Ss blas # 查找 blas相关的全部卸载
 pacman -R blas
